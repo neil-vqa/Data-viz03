@@ -146,7 +146,7 @@ def youtube(yt_link):
         marker={'color':'#05719D'},
         width=.4
     )],
-    layout=do.Layout(title=do.layout.Title(text='Video Views', x=0.5), margin=margins))
+    layout=do.Layout(title=do.layout.Title(text='Video Views', x=0.5), margin=margins,plot_bgcolor='#ffffff'))
 
     like = do.Figure(data = [do.Scatter(
         x= l_vid['title'],
@@ -156,7 +156,7 @@ def youtube(yt_link):
         marker={'color':'#3484F0', 'size':15}
     )],
     layout=do.Layout(title=do.layout.Title(text='Likes', x=0.5), shapes=shape_line,
-    			xaxis={'showgrid':False}, margin=margins))
+    			xaxis={'showgrid':False}, margin=margins,plot_bgcolor='#ffffff'))
 
     dislike = do.Figure(data = [do.Bar(
         x= d_vid['title'],
@@ -165,7 +165,7 @@ def youtube(yt_link):
         marker={'color':'#757575'},
         width=.4
     )],
-    layout=do.Layout(title=do.layout.Title(text='Dislikes', x=0.5), margin=margins))
+    layout=do.Layout(title=do.layout.Title(text='Dislikes', x=0.5), margin=margins,plot_bgcolor='#ffffff'))
     
     react = do.Figure(data = [do.Bar(
         x= r_vid['title'],
@@ -184,7 +184,7 @@ def youtube(yt_link):
     	)
     	],
     layout=do.Layout(title=do.layout.Title(text='Reaction Count (Likes + Dislikes)', x=0.5),
-    			barmode='stack', showlegend=False, margin=margins))
+    			barmode='stack', showlegend=False, margin=margins,plot_bgcolor='#ffffff'))
     
     react_ratio = do.Figure(data = [do.Scatter(
         x= rt_vid['likes'],
@@ -194,7 +194,7 @@ def youtube(yt_link):
         marker={'color':'#D291BC','size':[i for i in bubbles],'opacity':0.4}
     )],
     layout=do.Layout(title=do.layout.Title(text='Reaction Ratio (Likes / Dislikes)', x=0.5),
-    		     xaxis={'showgrid':False}, yaxis={'showgrid':False}, margin=margins))
+    		     xaxis={'showgrid':False}, yaxis={'showgrid':False}, margin=margins,plot_bgcolor='#ffffff'))
     
     like_ratio = do.Figure(data = [do.Barpolar(
         r= lr_vid['like_ratio'],
