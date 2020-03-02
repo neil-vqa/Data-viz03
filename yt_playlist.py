@@ -7,7 +7,7 @@ def playlist_serv(inputId, numResult):
     
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyB7soJskc5W7mXFZCB_n3RqTmVvh31OnvY"
+    DEVELOPER_KEY = os.environ.get('YT_KEY')
 
     if len(inputId.split('=')) == 3:
         playId = '{}' .format(inputId.split('=')[2])
