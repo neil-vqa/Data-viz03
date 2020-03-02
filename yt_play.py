@@ -4,7 +4,7 @@ import googleapiclient.discovery
 
 api_service_name = "youtube"
 api_version = "v3"
-DEVELOPER_KEY = "AIzaSyB7soJskc5W7mXFZCB_n3RqTmVvh31OnvY"
+DEVELOPER_KEY = os.environ.get('YT_KEY')
 
 def search_serv(q, numResult, sortOrder):
 
