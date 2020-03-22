@@ -35,18 +35,18 @@ header = dbc.Container([
 
 body = dbc.Container([
 	dbc.Row([
-		dbc.Col(html.Div(dcc.Graph(id='view-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg'),
-		dbc.Col(html.Div(dcc.Graph(id='like-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg')
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='view-chart')), className='shadow mt-3 rounded-lg'), md=6),
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='like-chart')), className='shadow mt-3 rounded-lg'), md=6)
 	]),
 	dbc.Row([
-		dbc.Col(html.Div(dcc.Graph(id='dislike-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg'),
-		dbc.Col(html.Div(dcc.Graph(id='react-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg')
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='dislike-chart')), className='shadow mt-3 rounded-lg'), md=6),
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='react-chart')), className='shadow mt-3 rounded-lg'), md=6)
 	], className='mt-4'),
 	dbc.Row([
-		dbc.Col(html.Div(dcc.Graph(id='rratio-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg'),
-		dbc.Col(html.Div(dcc.Graph(id='lratio-chart')), className='shadow mr-3 ml-3 mt-3 rounded-lg')
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='rratio-chart')), className='shadow mt-3 rounded-lg'), md=6),
+		dbc.Col(dbc.Col(html.Div(dcc.Graph(id='lratio-chart')), className='shadow mt-3 rounded-lg'), md=6)
 	], className='mt-4')
-], className='mt-3 mb-3')
+], className='my-3')
 
 footer = dbc.Container([
 	dbc.Row([
@@ -170,5 +170,4 @@ def youtube(n_clicks, value):
 	return view, like, dislike, react, react_ratio, like_ratio
 	
 if __name__=='__main__':
-    app.run_server(debug=True)
-
+    app.run_server(debug=False)
