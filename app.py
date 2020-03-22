@@ -7,7 +7,7 @@ import plotly.graph_objects as do
 import pandas as pd
 from yt_playlist import playlist_serv
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__,meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}])
 server = app.server
 app.title= 'View Playlist Data!'
 
